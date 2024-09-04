@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: lbgateway
+    
+#  cloud:
+#   gateway:
+#    routes:
+#      - id: helloservice-route
+#        uri: lb://LBSERVICE
+#        predicates:
+#         - Path=/test/**
+#    discovery:
+#     locator:
+#      enabled: true
+     
+       
+     
+server:
+  port: 9999
+  
+  
+management:
+ endpoints:
+   web:
+     exposure:
+       include: "*"
+ endpoint:
+    health:
+     show-details: always
+    gateway:
+      enabled: true

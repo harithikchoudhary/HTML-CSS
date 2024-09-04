@@ -1,0 +1,21 @@
+spring:
+ application:
+  name: lbservice
+
+  
+server:
+  port: 0
+  
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    instance-id: "${spring.application.name}: ${instanceId:${random.value}}"
+      
+    
+ 

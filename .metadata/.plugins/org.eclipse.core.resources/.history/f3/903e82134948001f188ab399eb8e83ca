@@ -1,0 +1,50 @@
+package com.iiht.inter;
+
+import org.apache.tika.language.detect.LanguageDetector;
+import org.apache.tika.language.detect.LanguageResult;
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Locale;
+
+@RestController
+public class HeaderController {
+
+    private final LanguageDetector languageDetector;
+
+    public HeaderController(LanguageDetector languageDetector) {
+        this.languageDetector = languageDetector;
+    }
+
+    @GetMapping("/header")
+    public HttpHeaders getHeader(@RequestHeader(name = "Accept-Language", required = false) String acceptLanguage) {
+        HttpHeaders headers = new HttpHeaders();
+
+        String detectedLanguage = detectLanguage(acceptLanguage);
+        String greeting = getLocalizedGreeting(detectedLanguage);
+        headers.add("X-Header-Greeting", greeting);
+
+        return headers;
+    }
+
+    private String detectLanguage(String acceptLanguageHeader) {
+        if (acceptLanguageHeader != null && !acceptLanguageHeader.isEmpty()) {
+            LanguageResult result = languageDetector.detect(acceptLanguageHeader);
+            return result.getLanguage();
+        } else {
+            return Locale.getDefault().getLanguage(); // Default to server locale if header not provided
+        }
+    }
+
+    private String getLocalizedGreeting(String language) {
+        // Example: Implement logic to retrieve localized greeting based on language
+        switch (language) {
+            case "fr":
+                return "Bienvenue!";
+            default:
+                return "Welcome!";
+        }
+    }
+}

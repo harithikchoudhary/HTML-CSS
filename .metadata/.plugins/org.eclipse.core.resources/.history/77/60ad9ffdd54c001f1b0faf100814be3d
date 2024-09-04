@@ -1,0 +1,5 @@
+package com.iiht.security.config;
+
+public class Configuration {
+
+}

@@ -1,0 +1,5 @@
+package com.iiht.jwt.securityconfig;
+
+public class EmpSecurityConfig {
+
+}

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: BootSecurity-OAuth1
+  
+server:
+  port: 9090
+
+security:
+  oauth2:
+    client:
+      clientId: 1031164111793355
+      clientSecret: 6ab08f2e808012e76fc53a354dbf9c8f
+      accessTokenUri: https://graph.facebook.com/v20.0/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/v20.0/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me

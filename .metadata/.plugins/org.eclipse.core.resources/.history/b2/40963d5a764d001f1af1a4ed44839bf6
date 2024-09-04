@@ -1,0 +1,2 @@
+spring.application.name=helloservice-res4j-client
+server.port= 8095

@@ -1,0 +1,11 @@
+package com.ust.serialization;
+
+public class PurchaseOrder{
+	
+	private String orderId;
+	private String company;
+	private int qty;
+	private double price;
+	
+
+}

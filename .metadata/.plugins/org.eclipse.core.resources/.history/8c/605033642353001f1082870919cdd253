@@ -1,0 +1,11 @@
+package com.ust.lambda;
+
+//while doing lambda , classes should be in packages
+public class HelloLambda {
+
+	
+	public String hnandleRequest() {
+		return "Hello Aws Lambda!!! ";
+	}
+
+}

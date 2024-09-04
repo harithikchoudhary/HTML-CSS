@@ -1,0 +1,5 @@
+package com.iiht.jwt.util;
+
+public class JwtUtil {
+
+}

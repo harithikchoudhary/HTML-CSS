@@ -1,0 +1,8 @@
+spring.application.name=FirstRestJPAMySql
+
+spring.datasource.url:jdbc:mysql://localhost:3306/test
+spring.datasource.username=root
+spring.datasource.password=pass@word1
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+management.endpoints.web.exposure.include= *

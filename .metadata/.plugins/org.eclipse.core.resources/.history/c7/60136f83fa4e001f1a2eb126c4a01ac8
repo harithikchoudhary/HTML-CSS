@@ -1,0 +1,7 @@
+spring.application.name=FirstRest
+
+
+
+
+#mvn spring-boot:run
+# .\mvnw spring-boot:run

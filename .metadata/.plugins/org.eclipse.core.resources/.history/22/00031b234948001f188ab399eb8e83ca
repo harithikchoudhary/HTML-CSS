@@ -1,0 +1,23 @@
+package com.iiht.inter;
+
+import org.apache.tika.language.detect.LanguageDetector;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@SpringBootApplication
+public class InternationalizationApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(InternationalizationApplication.class, args);
+		
+		@Bean
+		public LanguageDetector languageDetector(){
+			return LanguageDetectorBuilder.create().build();
+		}
+		
+	}
+
+}

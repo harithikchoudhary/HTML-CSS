@@ -1,0 +1,14 @@
+package com.iiht.security.model;
+
+
+
+public class Product {
+	
+
+	Integer productId;
+	String name;
+	String category;
+	String brand;
+	double price;
+
+}

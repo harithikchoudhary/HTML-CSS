@@ -1,0 +1,5 @@
+package com.iiht.client.controller;
+
+public class HelloClient {
+
+}

@@ -1,0 +1,15 @@
+package com.iiht.security.model;
+
+public class Product {
+	
+	private int id;
+	private String description;
+	private double price;
+	
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}
